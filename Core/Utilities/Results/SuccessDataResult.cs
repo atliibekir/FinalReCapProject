@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.Entities.Concrete;
+
 
 namespace Core.Utilities.Results
 {
@@ -18,7 +20,7 @@ namespace Core.Utilities.Results
         {
                 
         }
-        public SuccessDataResult() : base(default, true)
+        public SuccessDataResult(IDataResult<User> userToCheck, string successfulLogin) : base(default, true)
         {
 
         }

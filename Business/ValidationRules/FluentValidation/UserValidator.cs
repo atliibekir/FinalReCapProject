@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using Core.Entities.Concrete;
 
 namespace Business.ValidationRules.FluentValidation
 {
@@ -12,9 +13,9 @@ namespace Business.ValidationRules.FluentValidation
         public UserValidator()
         {
             RuleFor(u => u.Email).EmailAddress();
-            RuleFor(u => u.Password).NotEmpty();
-            RuleFor(u => u.Password).Length(5, 17);            
-            RuleFor(u => u.Password).Must(IsPasswordValid);
+            //RuleFor(u => u.Password).NotEmpty();
+            //RuleFor(u => u.Password).Length(5, 17);            
+            //RuleFor(u => u.Password).Must(IsPasswordValid);
 
         }
 

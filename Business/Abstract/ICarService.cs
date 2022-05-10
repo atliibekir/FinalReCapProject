@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.Abstarct
+namespace Business.Abstract
 {
     public interface ICarService
     {
@@ -17,5 +17,6 @@ namespace Business.Abstarct
         IResult Add(Car car);
         IResult Delete(Car car);
         IResult Update(Car car);
+        IResult AddTransactionalTest(Car car);
     }
 }

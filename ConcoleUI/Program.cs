@@ -3,6 +3,7 @@ using Business.Constants;
 using DataAccsess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
+using Core.Entities.Concrete;
 
 namespace ConcoleUI
 {
@@ -12,7 +13,7 @@ namespace ConcoleUI
         {
             //CarTest();
             //BrandTest();
-            UserAdd();
+            //UserAdd();
             //CustomerAdd();           
             //RentalAdd();
 
@@ -43,11 +44,11 @@ namespace ConcoleUI
         private static void UserAdd()
         {
             UserManager userManager = new UserManager(new EfUserDal());
-            userManager.Add(new User() { FirstName = "Bekir", LastName = "Atlı", Email = "abc@gmail.com", Password = "1234a" });
-            userManager.Add(new User() { FirstName = "Emir", LastName = "Acar", Email = "xxx@gmail.com", Password = "1234e" });
-            userManager.Add(new User() { FirstName = "Emre", LastName = "Polat", Email = "xyx@gmail.com", Password = "1234b" });
-            userManager.Add(new User() { FirstName = "Samet", LastName = "Akbaş", Email = "xyz@gmail.com", Password = "1234s" });
-            userManager.Add(new User() { FirstName = "Mert", LastName = "Sarıkaya", Email = "zxx@gmail.com", Password = "1234m" });
+            userManager.Add(new User() { FirstName = "Bekir", LastName = "Atlı", Email = "abc@gmail.com" });
+            userManager.Add(new User() { FirstName = "Emir", LastName = "Acar", Email = "xxx@gmail.com"});
+            userManager.Add(new User() { FirstName = "Emre", LastName = "Polat", Email = "xyx@gmail.com"});
+            userManager.Add(new User() { FirstName = "Samet", LastName = "Akbaş", Email = "xyz@gmail.com"});
+            userManager.Add(new User() { FirstName = "Mert", LastName = "Sarıkaya", Email = "zxx@gmail.com"});
         }
 
         private static void BrandTest()
