@@ -16,7 +16,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac.Core;
 using Core.Extensions;
-using Core.Utilities.DependencyResolvers;
+using Core.DependencyResolvers;
 using Core.Utilities.IoC;
 using Core.Utilities.Security.Encryption;
 using Core.Utilities.Security.JWT;
@@ -44,7 +44,9 @@ namespace WebAPI
                options.AddPolicy("AllowOrigin", 
                    builder => builder.WithOrigins("http://localhost:3000")); 
             });
-            
+
+            services.AddCors();
+
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -83,7 +85,7 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
             app.UseHttpsRedirection();
 
