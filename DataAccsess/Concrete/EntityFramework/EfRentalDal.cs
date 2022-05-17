@@ -21,7 +21,7 @@ namespace DataAccsess.Concrete.EntityFramework
                     join b in context.Brands on ca.BrandId equals b.Id
                     join u in context.Users on c.UserId equals u.Id
                     select new RentalDetailDto
-                        { Id = r.RentalId, BrandName = b.BrandName, FirstName = u.FirstName, LastName = u.LastName };
+                        { Id = r.RentalId, BrandName = b.BrandName, FirstName = u.FirstName, LastName = u.LastName,RenDate = r.RenDate.ToString("d"),ReturnDate = r.ReturnDate.ToString("d")};
                 return result.ToList();
             }
             

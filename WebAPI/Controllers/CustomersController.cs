@@ -11,11 +11,11 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CutomersController : ControllerBase
+    public class CustomersController : ControllerBase
     {
         ICustomerService _customerService;
 
-        public CutomersController(ICustomerService customerService)
+        public CustomersController(ICustomerService customerService)
         {
             _customerService = customerService;
         }
