@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Core.Utilities.Helper.GuidHelper
+namespace Core.Utilities.Helper.FileHelper
 {
     public class GuidHelper
     {

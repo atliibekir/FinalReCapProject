@@ -33,6 +33,11 @@ namespace DataAccsess.Concrete.InMemory
             _cars.Remove(carToDelete);
         }
 
+        public List<CarDetailDto> GetCarDetail(Expression<Func<CarDetailDto, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Car Get(Expression<Func<Car, bool>> filter)
         {
             throw new NotImplementedException();
